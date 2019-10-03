@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Sample</string>
+
+    <string name="home_title">Here is your home</string>
+    <string name="sync_title">Press it to sync data</string>
+    <string name="timer_title">Here is your activity timer</string>
+    <string name="distance_title">Here is your distance</string>
+    <string name="calories_title">Here is your calories</string>
+    <string name="pace_title">Here is your pace</string>
+    <string name="tracking_title">Tracking screen</string>
+    <string name="plan_item_title">Your exercises</string>
+    <string name="plan_title">Your daily plan</string>
+
+    <string name="home_desc">Here is displayed your daily activity info</string>
+    <string name="sync_desc">Here you can sync your data with another device</string>
+    <string name="timer_desc">Here is displayed the time of your activity</string>
+    <string name="distance_desc">Here is displayed the distance passed while tracking</string>
+    <string name="calories_desc">Here is displayed the calories burned while tracking</string>
+    <string name="pace_desc">Here is displayed your average pace</string>
+    <string name="tracking_desc">Press here to open tracking screen</string>
+    <string name="plan_item_desc">Today you have to do the next exercises..</string>
+    <string name="plan_desc">Tap here to see your daily plan</string>
+
+    <string name="got_it">Got it!</string>
+
+    <string name="home">Home</string>
+    <string name="tracking">Tracking</string>
+    <string name="plan">Your plan</string>
+    <string name="distance_value">3,60</string>
+    <string name="distance">Distance\n(km)</string>
+    <string name="calories_value">169</string>
+    <string name="calories">Calories\n(cal)</string>
+    <string name="pace_value">5</string>
+    <string name="pace">Avg. pace\n(km/h)</string>
+    <string name="time_initial">00:53:19</string>
+    <string name="explain_next">Explain next screen</string>
+    <string name="today">Today</string>
+    <string name="your_plan">Your plan</string>
+    <string name="burn_fat">Let\'s burn some fat</string>
+</resources>

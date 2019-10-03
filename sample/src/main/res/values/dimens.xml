@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_xxx_small">10sp</dimen>
+    <dimen name="text_size_xx_small">11sp</dimen>
+    <dimen name="text_size_extra_small">12sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_large">15sp</dimen>
+    <dimen name="text_size_extra_large">16sp</dimen>
+    <dimen name="text_size_xx_large">17sp</dimen>
+    <dimen name="text_size_xxx_large">20sp</dimen>
+    <dimen name="text_size_xxxx_large">24sp</dimen>
+    <dimen name="text_size_timer">60sp</dimen>
+
+    <dimen name="activity_item_offset">60dp</dimen>
+</resources>

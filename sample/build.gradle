@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+
+android {
+
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "com.cleveroad.blur_tutorial.sample"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    implementation project(':blur_tutorial')
+
+    // Support
+    implementation supportDependencies.lifecycleExtension
+    implementation supportDependencies.constraintlayout
+    implementation supportDependencies.recyclerView
+    implementation supportDependencies.appCompat
+    implementation supportDependencies.multiDex
+    implementation supportDependencies.kotlin
+    implementation supportDependencies.design
+
+    // Anko
+    implementation ankoDependencies.anko
+
+    // RX
+    implementation rxDependencies.rxJava2
+    implementation rxDependencies.rxAndroid
+
+    // Joda-time
+    implementation jodaDependencies.time
+}
