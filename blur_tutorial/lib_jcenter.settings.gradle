@@ -5,8 +5,8 @@ ext {
     bintrayName = 'blur-tutorial'
 
     publishedGroupId = 'com.cleveroad.blur_tutorial'
-    libraryName = 'blur-tutorial'
-    artifact = 'blur-tutorial'
+    libraryName = 'blur_tutorial'
+    artifact = 'blur_tutorial'
 
     libraryDescription = 'Blur tutorial'
 }

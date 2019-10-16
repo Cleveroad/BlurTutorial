@@ -1,6 +1,6 @@
 ext {
-    libraryVersionCode = 1
-    libraryVersion = '1.0.0'
+    libraryVersionCode = 2
+    libraryVersion = '1.0.1'
 
     developerId = 'cleveroad'
     developerName = 'Eugene Altynpara'
