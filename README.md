@@ -1,7 +1,7 @@
 ### Setup ###
 To use BlurTutorial add dependency to your project:
 ```groovy
-    implementation 'com.cleveroad.blur_tutorial:blur_tutorial:1.0.1'
+implementation 'com.cleveroad.blur_tutorial:blur_tutorial:1.0.1'
 ```
 
 
@@ -10,84 +10,84 @@ To use BlurTutorial add dependency to your project:
 The main component of library is the <b>BlurTutorial</b> interface.
 
 ```kotlin
-    /*
-     Add list of states to tutorial.
-    */
-    fun addAllStates(states: List<TutorialState>)
+/*
+ Add list of states to tutorial.
+*/
+fun addAllStates(states: List<TutorialState>)
 
-    /*
-     Add one state to tutorial.
-    */
-    fun addState(state: TutorialState)
+/*
+ Add one state to tutorial.
+*/
+fun addState(state: TutorialState)
 
-    /*
-     Add one state by position.
-    */
-    fun setState(state: TutorialState, index: Int)
+/*
+ Add one state by position.
+*/
+fun setState(state: TutorialState, index: Int)
 
-    /*
-     Remove state from tutorial.
-    */
-    fun removeState(state: TutorialState)
+/*
+ Remove state from tutorial.
+*/
+fun removeState(state: TutorialState)
 
-    /*
-     Clear all states of tutorial. 
-     Cancel tutorial process.
-    */
-    fun clearStates()
+/*
+ Clear all states of tutorial. 
+ Cancel tutorial process.
+*/
+fun clearStates()
 
-    /*
-     Get current state of tutorial.
-    */
-    fun getCurrentState(): TutorialState?
+/*
+ Get current state of tutorial.
+*/
+fun getCurrentState(): TutorialState?
 
-    /*
-     Start tutorial process.
-     
-     Should be called in [Activity.onResume] or [Fragment.onResume] or later.
-     If you also highlight action bar menu items,
-     call it in [Activity.onPrepareOptionsMenu] or [Fragment.onPrepareOptionsMenu] or later.
-    */
-    fun start()
+/*
+ Start tutorial process.
+ 
+ Should be called in [Activity.onResume] or [Fragment.onResume] or later.
+ If you also highlight action bar menu items,
+ call it in [Activity.onPrepareOptionsMenu] or [Fragment.onPrepareOptionsMenu] or later.
+*/
+fun start()
 
-    /*
-     Go to next state of tutorial.
-     Finish the current state.
-    */
-    fun next()
+/*
+ Go to next state of tutorial.
+ Finish the current state.
+*/
+fun next()
 
-    /*
-     Interrupt tutorial process.
-     It can be renewed by calling next() or start()
-    */
-    fun interrupt()
+/*
+ Interrupt tutorial process.
+ It can be renewed by calling next() or start()
+*/
+fun interrupt()
     
-    /* 
-     Change configuration of
-     current [BlurTutorial] instance.
-    */
-    fun configure(): TutorialBuilder
+/* 
+ Change configuration of
+ current [BlurTutorial] instance.
+*/
+fun configure(): TutorialBuilder
 
-    /* 
-     Save state of tutorial. 
-     You must call it in onSaveInstanceState()
-     of your Fragment or Activity.
-    */
-    fun onSaveInstanceState(outState: Bundle)
+/* 
+ Save state of tutorial. 
+ You must call it in onSaveInstanceState()
+ of your Fragment or Activity.
+*/
+fun onSaveInstanceState(outState: Bundle)
 
-    /* 
-     Restore state of tutorial. 
-     You must call it in onRestoreInstanceState() of 
-     your Fragment or Activity.
-    */
-    fun onRestoreInstanceState(savedState: Bundle?)
+/* 
+ Restore state of tutorial. 
+ You must call it in onRestoreInstanceState() of 
+ your Fragment or Activity.
+*/
+fun onRestoreInstanceState(savedState: Bundle?)
 
-    /*
-     Release resources. 
-     You must call it in onDestroy() of 
-     your Fragment or Activity.
-    */
-    fun onDestroy()
+/*
+ Release resources. 
+ You must call it in onDestroy() of 
+ your Fragment or Activity.
+*/
+fun onDestroy()
 ```
 #### TutorialState ####
 <b>TutorialState</b> is an interface, that describes UI item to explain. There are a few data classes, that implement this interface: 
@@ -128,10 +128,15 @@ interface TutorialListener {
     */
     override fun onStateEnter(state: TutorialState)
 
-    // Called after state exit.
+    /*
+     Called after state exit.
+    */
     override fun onStateExit(state: TutorialState)
 
-    // Called on state error. E.g. highlighted view is not visible, etc.
+    /* 
+     Called on state error. 
+     E.g. highlighted view is not visible, etc.
+    */
     override fun onStateError(state: TutorialState, error: StateException)
 
     /* 
@@ -140,7 +145,9 @@ interface TutorialListener {
     */
     override fun onPopupViewInflated(state: TutorialState, popupView: View)
 
-    // Called when tutorial process is finished.
+    /*
+     Called when tutorial process is finished.
+    */
     override fun onFinish()
 }
 ```
