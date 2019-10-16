@@ -1,54 +1,92 @@
+### Setup ###
+To use BlurTutorial add dependency to your project:
+```groovy
+    implementation 'com.cleveroad.blur_tutorial:blur_tutorial:1.0.1'
+```
+
+
 ### Usage ###
 #### BlurTutorial ####
 The main component of library is the <b>BlurTutorial</b> interface.
 
 ```kotlin
-    // add list of states to tutorial
+    /*
+     Add list of states to tutorial.
+    */
     fun addAllStates(states: List<TutorialState>)
 
-    // add one state to tutorial
+    /*
+     Add one state to tutorial.
+    */
     fun addState(state: TutorialState)
 
-    // add one state to position
+    /*
+     Add one state by position.
+    */
     fun setState(state: TutorialState, index: Int)
 
-    // remove state from tutorial
+    /*
+     Remove state from tutorial.
+    */
     fun removeState(state: TutorialState)
 
-    // clear all states of tutorial. Cancel tutorial process.
+    /*
+     Clear all states of tutorial. 
+     Cancel tutorial process.
+    */
     fun clearStates()
 
-    // get current state of tutorial
+    /*
+     Get current state of tutorial.
+    */
     fun getCurrentState(): TutorialState?
 
     /*
-     * Start tutorial process.
-     *
-     * Should be called in [Activity.onResume] or [Fragment.onResume] or later.
-     * If you also highlight action bar menu items,
-     * call it in [Activity.onPrepareOptionsMenu] or [Fragment.onPrepareOptionsMenu] or later.
-     */
+     Start tutorial process.
+     
+     Should be called in [Activity.onResume] or [Fragment.onResume] or later.
+     If you also highlight action bar menu items,
+     call it in [Activity.onPrepareOptionsMenu] or [Fragment.onPrepareOptionsMenu] or later.
+    */
     fun start()
 
-    // go to next state of tutorial. Finish the current state.
+    /*
+     Go to next state of tutorial.
+     Finish the current state.
+    */
     fun next()
 
-    /**
-     * Interrupt tutorial process.
-     * It can be renewed by calling next() or start()
-     */
+    /*
+     Interrupt tutorial process.
+     It can be renewed by calling next() or start()
+    */
     fun interrupt()
     
-    // change configuration of current [BlurTutorial] instance.
+    /* 
+     Change configuration of
+     current [BlurTutorial] instance.
+    */
     fun configure(): TutorialBuilder
 
-    // save state of tutorial. Ypu must call it in onSaveInstanceState() of your Fragment or Activity.
+    /* 
+     Save state of tutorial. 
+     You must call it in onSaveInstanceState()
+     of your Fragment or Activity.
+    */
     fun onSaveInstanceState(outState: Bundle)
 
-    // restore state of tutorial. You must call it in onRestoreInstanceState() of your Fragment or Activity.
+    /* 
+     Restore state of tutorial. 
+     You must call it in onRestoreInstanceState() of 
+     your Fragment or Activity.
+    */
     fun onRestoreInstanceState(savedState: Bundle?)
 
-    // Release resources. You must call it in onDestroy() of Fragment or Activity.
+    /*
+     Release resources. 
+     You must call it in onDestroy() of 
+     your Fragment or Activity.
+    */
     fun onDestroy()
 ```
 #### TutorialState ####
