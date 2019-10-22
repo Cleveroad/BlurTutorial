@@ -5,11 +5,11 @@ Hurry to check our newest library that helps to blur the background in Android a
 
 ![Demo image](/images/demo_.gif)
 
-## Want to play around with BlurTutorial animation? Check Appetize!
+# Want to play around with BlurTutorial animation? Check Appetize!
 
 We’ve created the library to help users enhance their app's usability and appearance. BlurTutorial handles both the tasks.
 
-[![Awesome](/images/google-play.png)](https://appetize.io/app/y8jzy8hdvwxr6nuucympeqgx5c)
+[![Awesome](/images/appertize.png)](https://appetize.io/app/y8jzy8hdvwxr6nuucympeqgx5c)
 
 [![Awesome](/images/logo-footer_.png)](https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts)
 <br/>
