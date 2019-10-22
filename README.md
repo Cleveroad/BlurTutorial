@@ -1,3 +1,19 @@
+# BlurTutorial [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) <img src="https://www.cleveroad.com/public/comercial/label-android.svg" height="19"> <a href="https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts"><img src="https://www.cleveroad.com/public/comercial/label-cleveroad.svg" height="19"></a>
+![Header image](/images/header.png)
+## Meet BlurTutorial, an Android-based library made by Cleveroad
+Hurry to check our newest library that helps to blur the background in Android apps. BlurTutorial highlights the needed UI elements and brings users' attention to the app's parts you're introducing. You can easily apply a blurred view behind the dialog window and context menu, singling out the important elements.
+
+![Demo image](/images/demo_.gif)
+
+## Want to play around with BlurTutorial animation? Check Appetize!
+
+We’ve created the library to help users enhance their app's usability and appearance. BlurTutorial handles both the tasks.
+
+[![Awesome](/images/google-play.png)](https://appetize.io/app/y8jzy8hdvwxr6nuucympeqgx5c)
+
+[![Awesome](/images/logo-footer_.png)](https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts)
+<br/>
+
 ### Setup ###
 To use BlurTutorial add dependency to your project:
 ```groovy
