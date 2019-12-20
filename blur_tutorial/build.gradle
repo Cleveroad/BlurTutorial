@@ -6,14 +6,16 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply from: 'lib_jcenter.settings.gradle'
+
 android {
     compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode libraryVersionCode
+        versionName libraryVersion
 
         consumerProguardFiles 'proguard-rules.pro'
     }
@@ -38,3 +40,10 @@ dependencies {
     implementation supportDependencies.design
     implementation supportDependencies.kotlin
 }
+
+//Add these lines to publish library to bintray
+//Place it at the end of the file
+apply from: '../installv1.gradle'
+//https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle
+apply from: '../bintrayv1.gradle'
+// https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle

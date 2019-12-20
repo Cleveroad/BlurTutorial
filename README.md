@@ -1,7 +1,23 @@
+# BlurTutorial [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) <img src="https://www.cleveroad.com/public/comercial/label-android.svg" height="19"> <a href="https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts"><img src="https://www.cleveroad.com/public/comercial/label-cleveroad.svg" height="19"></a>
+![Header image](/images/header.jpg)
+## Meet BlurTutorial, an Android-based library made by Cleveroad
+Hurry to check our newest library that helps to blur the background in Android apps. BlurTutorial highlights the needed UI elements and brings users' attention to the app's parts you're introducing. You can easily apply a blurred view behind the dialog window and context menu, singling out the important elements.
+
+![Demo image](/images/demo.gif)
+
+## Want to play around with BlurTutorial animation? Check Appetize!
+
+We’ve created the library to help users enhance their app's usability and appearance. BlurTutorial handles both the tasks.
+
+[![Awesome](/images/appertize.png)](https://appetize.io/app/y8jzy8hdvwxr6nuucympeqgx5c)
+
+[![Awesome](/images/logo-footer_.png)](https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts)
+<br/>
+
 ### Setup ###
 To use BlurTutorial add dependency to your project:
 ```groovy
-implementation 'com.cleveroad.blur_tutorial:blur_tutorial:1.0.1'
+    implementation 'com.cleveroad.blur_tutorial:blur_tutorial:1.0.1'
 ```
 
 
@@ -10,84 +26,84 @@ implementation 'com.cleveroad.blur_tutorial:blur_tutorial:1.0.1'
 The main component of library is the <b>BlurTutorial</b> interface.
 
 ```kotlin
-/*
- Add list of states to tutorial.
-*/
-fun addAllStates(states: List<TutorialState>)
+    /*
+     Add list of states to tutorial.
+    */
+    fun addAllStates(states: List<TutorialState>)
 
-/*
- Add one state to tutorial.
-*/
-fun addState(state: TutorialState)
+    /*
+     Add one state to tutorial.
+    */
+    fun addState(state: TutorialState)
 
-/*
- Add one state by position.
-*/
-fun setState(state: TutorialState, index: Int)
+    /*
+     Add one state by position.
+    */
+    fun setState(state: TutorialState, index: Int)
 
-/*
- Remove state from tutorial.
-*/
-fun removeState(state: TutorialState)
+    /*
+     Remove state from tutorial.
+    */
+    fun removeState(state: TutorialState)
 
-/*
- Clear all states of tutorial. 
- Cancel tutorial process.
-*/
-fun clearStates()
+    /*
+     Clear all states of tutorial. 
+     Cancel tutorial process.
+    */
+    fun clearStates()
 
-/*
- Get current state of tutorial.
-*/
-fun getCurrentState(): TutorialState?
+    /*
+     Get current state of tutorial.
+    */
+    fun getCurrentState(): TutorialState?
 
-/*
- Start tutorial process.
- 
- Should be called in [Activity.onResume] or [Fragment.onResume] or later.
- If you also highlight action bar menu items,
- call it in [Activity.onPrepareOptionsMenu] or [Fragment.onPrepareOptionsMenu] or later.
-*/
-fun start()
+    /*
+     Start tutorial process.
+     
+     Should be called in [Activity.onResume] or [Fragment.onResume] or later.
+     If you also highlight action bar menu items,
+     call it in [Activity.onPrepareOptionsMenu] or [Fragment.onPrepareOptionsMenu] or later.
+    */
+    fun start()
 
-/*
- Go to next state of tutorial.
- Finish the current state.
-*/
-fun next()
+    /*
+     Go to next state of tutorial.
+     Finish the current state.
+    */
+    fun next()
 
-/*
- Interrupt tutorial process.
- It can be renewed by calling next() or start()
-*/
-fun interrupt()
+    /*
+     Interrupt tutorial process.
+     It can be renewed by calling next() or start()
+    */
+    fun interrupt()
     
-/* 
- Change configuration of
- current [BlurTutorial] instance.
-*/
-fun configure(): TutorialBuilder
+    /* 
+     Change configuration of
+     current [BlurTutorial] instance.
+    */
+    fun configure(): TutorialBuilder
 
-/* 
- Save state of tutorial. 
- You must call it in onSaveInstanceState()
- of your Fragment or Activity.
-*/
-fun onSaveInstanceState(outState: Bundle)
+    /* 
+     Save state of tutorial. 
+     You must call it in onSaveInstanceState()
+     of your Fragment or Activity.
+    */
+    fun onSaveInstanceState(outState: Bundle)
 
-/* 
- Restore state of tutorial. 
- You must call it in onRestoreInstanceState() of 
- your Fragment or Activity.
-*/
-fun onRestoreInstanceState(savedState: Bundle?)
+    /* 
+     Restore state of tutorial. 
+     You must call it in onRestoreInstanceState() of 
+     your Fragment or Activity.
+    */
+    fun onRestoreInstanceState(savedState: Bundle?)
 
-/*
- Release resources. 
- You must call it in onDestroy() of 
- your Fragment or Activity.
-*/
-fun onDestroy()
+    /*
+     Release resources. 
+     You must call it in onDestroy() of 
+     your Fragment or Activity.
+    */
+    fun onDestroy()
 ```
 #### TutorialState ####
 <b>TutorialState</b> is an interface, that describes UI item to explain. There are a few data classes, that implement this interface: 
@@ -128,15 +144,10 @@ interface TutorialListener {
     */
     override fun onStateEnter(state: TutorialState)
 
-    /*
-     Called after state exit.
-    */
+    // Called after state exit.
     override fun onStateExit(state: TutorialState)
 
-    /* 
-     Called on state error. 
-     E.g. highlighted view is not visible, etc.
-    */
+    // Called on state error. E.g. highlighted view is not visible, etc.
     override fun onStateError(state: TutorialState, error: StateException)
 
     /* 
@@ -145,9 +156,7 @@ interface TutorialListener {
     */
     override fun onPopupViewInflated(state: TutorialState, popupView: View)
 
-    /*
-     Called when tutorial process is finished.
-    */
+    // Called when tutorial process is finished.
     override fun onFinish()
 }
 ```

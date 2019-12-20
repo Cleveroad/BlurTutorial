@@ -1,0 +1,12 @@
+apply from: '../main_jcenter.settings.gradle'
+
+ext {
+    bintrayRepo = 'blur-tutorial'
+    bintrayName = 'blur-tutorial'
+
+    publishedGroupId = 'com.cleveroad.blur_tutorial'
+    libraryName = 'blur_tutorial'
+    artifact = 'blur_tutorial'
+
+    libraryDescription = 'Blur tutorial'
+}
