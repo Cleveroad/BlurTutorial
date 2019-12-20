@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sample</string>
+    <string name="app_name">BlurTutorial Sample</string>
 
     <string name="home_title">Here is your home</string>
     <string name="sync_title">Press it to sync data</string>
